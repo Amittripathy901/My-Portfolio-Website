@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amit Tripathy Portfolio</title>
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link href="aos/aos.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,7 +19,10 @@
             <div class="container">
                 <div class="logo">A.T.</div>
                 <ul class="nav-links">
-                    <!-- ... same nav items ... -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -29,13 +38,19 @@
                 </div>
                 <div class="hero-illustration" data-aos="fade-left">
                     <div class="glowing-effect"></div>
-                    <img src="coding-illustration.svg" alt="DevOps Illustration">
+                    <img src="https://via.placeholder.com/400" alt="DevOps Illustration">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Skills Section Update -->
+    <section id="about" class="section" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+            I'm a fresher DevOps engineer specializing in automation, infrastructure as code, and cloud technologies. I aim to build scalable, efficient, and secure systems.
+        </p>
+    </section>
+
     <section id="skills" class="section">
         <h2 data-aos="fade-up">Technical Arsenal</h2>
         <div class="skills-grid">
@@ -44,33 +59,52 @@
                 <h3>Version Control</h3>
                 <p>Git | GitHub | GitLab</p>
             </div>
-            <!-- More skill cards with icons -->
+            <div class="skill-card" data-aos="flip-left">
+                <i class="fab fa-linux"></i>
+                <h3>Linux</h3>
+                <p>Shell Scripting | System Admin</p>
+            </div>
+            <div class="skill-card" data-aos="flip-left">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud</h3>
+                <p>AWS | Terraform | Ansible</p>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section Update -->
-    <div class="project-card">
-        <div class="project-image">
-            <div class="overlay">
-                <h3>AWS Deployment</h3>
-                <div class="tech-tags">
-                    <span>Terraform</span>
-                    <span>Ansible</span>
-                    <span>EC2</span>
+    <section id="projects" class="section">
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="fade-right">
+                <div class="project-image">
+                    <div class="overlay">
+                        <h3>AWS Deployment</h3>
+                        <div class="tech-tags">
+                            <span>Terraform</span>
+                            <span>Ansible</span>
+                            <span>EC2</span>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/400" alt="AWS Project">
+                </div>
+                <div class="project-details">
+                    <p>Built a highly scalable infrastructure for a web application on AWS.</p>
                 </div>
             </div>
-            <img src="project-1.jpg" alt="AWS Project">
+            <!-- Add more project cards here -->
         </div>
-        <div class="project-details">
-            <!-- Project details -->
-        </div>
-    </div>
+    </section>
 
-    <!-- Contact Form Addition -->
     <section id="contact" class="section">
+        <h2 data-aos="fade-up">Contact Me</h2>
         <div class="contact-container">
             <div class="contact-info" data-aos="fade-right">
-                <!-- Contact info -->
+                <p>Let's connect and collaborate!</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> amittripthy.work@gmail.com</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/Amittripathy901">GitHub</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/amit-tripathy/">LinkedIn</a></li>
+                </ul>
             </div>
             <form class="contact-form" data-aos="fade-left">
                 <input type="text" placeholder="Name" required>
@@ -80,5 +114,13 @@
             </form>
         </div>
     </section>
+
+    <footer>
+        <p>© 2024 Amit Tripathy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
