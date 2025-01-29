@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Tripathy Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="aos/aos.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <div class="container">
+                <h1>Hello, I'm <span>Amit Tripathy</span></h1>
+                <p>A Passionate <span>DevOps Engineer</span></p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+            I'm a fresher DevOps engineer specializing in automation, infrastructure as code, and cloud technologies. I aim to build scalable, efficient, and secure systems.
+        </p>
+    </section>
+
+    <section id="skills" class="section" data-aos="fade-left">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">Linux</div>
+            <div class="skill-card">Shell Scripting</div>
+            <div class="skill-card">Ansible</div>
+            <div class="skill-card">Terraform</div>
+            <div class="skill-card">AWS</div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-right">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Resilient and Scalable Web Application Deployment on AWS</h3>
+                <p>Built a system to implement a highly scalable infrastructure for a web application on AWS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Ansible</h3>
+                <p>Implemented a system creating multiple instances on AWS using Loops.</p>
+            </div>
+            <div class="project-card">
+                <h3>Terraform IaC</h3>
+                <p>Implemented a multi-cloud infrastructure using Terraform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <p>Let's connect and collaborate!</p>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Amit Tripathy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="aos/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
