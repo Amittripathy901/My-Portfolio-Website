@@ -1,9 +1,7 @@
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
 });
 
 // Smooth scroll for navigation links
@@ -19,14 +17,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Active nav link on scroll
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY;
-    
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let current = '';
+
     sections.forEach(section => {
-        if (scrollPosition >= section.offsetTop - 100) {
-            const id = section.getAttribute('id');
-            document.querySelector(`a[href="#${id}"]`).classList.add('active');
-        } else {
-            document.querySelector(`a[href="#${id}"]`).classList.remove('active');
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
         }
     });
 });
